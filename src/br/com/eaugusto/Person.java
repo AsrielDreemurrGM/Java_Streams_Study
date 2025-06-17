@@ -1,6 +1,7 @@
 package br.com.eaugusto;
 
 import java.util.List;
+import java.util.Objects;
 
 /**
  * Represents a person with basic attributes and provides a method to populate a
@@ -90,5 +91,25 @@ public class Person {
 		Person person3 = new Person("p3", "Neymar", "Brazil", 30);
 		Person person4 = new Person("p4", "Mario", "Canada", 22);
 		return List.of(person1, person2, person3, person4);
+	}
+
+	@Override
+	public int hashCode() {
+		return Objects.hash(id, name);
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj) {
+			return true;
+		}
+		if (obj == null) {
+			return false;
+		}
+		if (getClass() != obj.getClass()) {
+			return false;
+		}
+		Person other = (Person) obj;
+		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
 	}
 }
