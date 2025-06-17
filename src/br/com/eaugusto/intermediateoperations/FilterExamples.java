@@ -1,8 +1,10 @@
-package br.com.eaugusto;
+package br.com.eaugusto.intermediateoperations;
 
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
+
+import br.com.eaugusto.Person;
 
 /**
  * Demonstrates different ways of filtering elements from a list using Java

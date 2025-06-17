@@ -1,7 +1,9 @@
-package br.com.eaugusto;
+package br.com.eaugusto.intermediateoperations;
 
 import java.util.List;
 import java.util.stream.Stream;
+
+import br.com.eaugusto.Person;
 
 /**
  * Demonstrates the use of the distinct() method on a Stream. The distinct()

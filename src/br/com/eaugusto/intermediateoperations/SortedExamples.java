@@ -1,8 +1,10 @@
-package br.com.eaugusto;
+package br.com.eaugusto.intermediateoperations;
 
 import java.util.Comparator;
 import java.util.List;
 import java.util.stream.Stream;
+
+import br.com.eaugusto.Person;
 
 /**
  * Demonstrates how to sort streams of Person objects using different criteria.
