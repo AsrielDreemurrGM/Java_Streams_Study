@@ -3,16 +3,34 @@ package br.com.eaugusto;
 import java.util.List;
 
 /**
+ * Represents a person with basic attributes and provides a method to populate a
+ * list of (4) sample people.
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 16, 2025
  */
 public class Person {
 
-	private String name;
+	// Unique identifier for the person
 	private String id;
+
+	// Name of the person
+	private String name;
+
+	// Nationality of the person (e.g., Brazil, Mexico)
 	private String nationality;
+
+	// Age of the person in years
 	private int age;
 
+	/**
+	 * Constructs a new Person with all attributes initialized.
+	 * 
+	 * @param id          Unique ID
+	 * @param name        Full name
+	 * @param nationality Country of origin
+	 * @param age         Age in years
+	 */
 	public Person(String id, String name, String nationality, int age) {
 		this.id = id;
 		this.name = name;
@@ -20,10 +38,13 @@ public class Person {
 		this.age = age;
 	}
 
+	/**
+	 * Default constructor (required for certain frameworks or manual population).
+	 */
 	public Person() {
-
 	}
 
+	// Getters
 	public String getName() {
 		return name;
 	}
@@ -40,6 +61,7 @@ public class Person {
 		return age;
 	}
 
+	// Setters
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -56,6 +78,12 @@ public class Person {
 		this.age = age;
 	}
 
+	/**
+	 * Creates and returns a list of sample Person objects. Useful for testing
+	 * filtering and mapping operations.
+	 * 
+	 * @return A list of hardcoded Person instances.
+	 */
 	public List<Person> populatePeople() {
 		Person person1 = new Person("p1", "José Augusto", "Brazil", 23);
 		Person person2 = new Person("p2", "Hernandez", "Mexico", 21);
