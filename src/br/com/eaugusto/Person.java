@@ -39,6 +39,10 @@ public class Person {
 		this.age = age;
 	}
 
+	public Person(Person person) {
+		this(person.getId(), person.getName(), person.getNationality(), person.getAge());
+	}
+
 	/**
 	 * Default constructor (required for certain frameworks or manual population).
 	 */
@@ -89,7 +93,7 @@ public class Person {
 		Person person1 = new Person("p1", "José Augusto", "Brazil", 23);
 		Person person2 = new Person("p2", "Hernandez", "Mexico", 21);
 		Person person3 = new Person("p3", "Neymar", "Brazil", 30);
-		Person person4 = new Person("p4", "Mario", "Canada", 22);
+		Person person4 = new Person("p4", "Mario", "Canada", 21);
 		return List.of(person1, person2, person3, person4);
 	}
 
@@ -112,4 +116,10 @@ public class Person {
 		Person other = (Person) obj;
 		return Objects.equals(id, other.id) && Objects.equals(name, other.name);
 	}
+
+	@Override
+	public String toString() {
+		return "Person [Id: " + id + ", Name: " + name + ", Nationality: " + nationality + ", Age: " + age + "]";
+	}
+
 }
