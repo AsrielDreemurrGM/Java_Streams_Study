@@ -5,6 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 /**
+ * Reads a list of people from the console in the format "Name-Gender",
+ * separated by commas, and filters them into separate lists of women and men.
+ * Prints each group to the console using lambda expressions and streams.
+ * 
  * @author Eduardo Augusto (github.com/AsrielDreemurrGM/)
  * @since Jun 19, 2025
  */
